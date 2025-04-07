@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsywny Zegar</title>
-  <style>
-    /* Ustawienie obrazka, by był responsywny */
-    .countdown-gif {
-      width: 100%; /* Obrazek będzie dopasowywał się do szerokości ekranu */
-      height: auto; /* Zachowanie proporcji */
-      max-width: 650px; /* Maksymalna szerokość obrazka */
-    }
-  </style>
-</head>
-<body>
-  <h1>Odliczanie do wydarzenia</h1>
-  <img class="countdown-gif" src="http://localhost:3002/countdown.gif?date=2025-04-10T12:00:00" alt="Odliczanie">
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsywny Zegar</title>
+    <style>
+      /* Ustawienie obrazka, by był responsywny */
+      .countdown-gif {
+        width: 100%; /* Obrazek będzie dopasowywał się do szerokości ekranu */
+        height: auto; /* Zachowanie proporcji */
+        max-width: 650px; /* Maksymalna szerokość obrazka */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Odliczanie do wydarzenia</h1>
+    <img
+      style="width: 100%; height: auto; max-width: 650px"
+      src="http://localhost:3002/countdown.gif?date=2025-04-10T12:00:00"
+      alt="Odliczanie"
+    />
+  </body>
 </html>

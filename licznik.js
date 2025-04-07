@@ -1,8 +1,9 @@
 const express = require('express');
-const { createCanvas } = require('canvas');
+const { createCanvas, registerFont  } = require('canvas');
 const GIFEncoder = require('gif-encoder-2');
 const dayjs = require('dayjs');
 const duration = require('dayjs/plugin/duration');
+const path = require('path');
 
 dayjs.extend(duration);
 
@@ -51,7 +52,7 @@ app.get("/countdown.gif", (req, res) => {
       ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, 650, 150);
       ctx.fillStyle = 'black';
-      ctx.font = 'normal 48px sans-serif';
+      ctx.font = 'bold 70px sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText('CZAS MINĄŁ', 325, 75);
@@ -73,26 +74,26 @@ app.get("/countdown.gif", (req, res) => {
 
     // Wypisanie czasu
     ctx.fillStyle = 'black';
-    ctx.font = 'normal 70px sans-serif';
+    ctx.font = 'bold 70px Trebuchet MS';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(timeText, 325, 50); // Wyśrodkowanie tekstu
 
     // Podpisy pod dniami, godzinami, minutami i sekundami
     ctx.fillStyle = 'black';
-    ctx.font = '20px sans-serif';
+    ctx.font = 'normal 20px Trebuchet MS';
 
     // Dni
-    ctx.fillText('DNI', 110, 100);
+    ctx.fillText('DNI', 100, 100);
 
     // Godziny
     ctx.fillText('GODZIN', 255, 100);
 
     // Minuty
-    ctx.fillText('MINUT', 395, 100);
+    ctx.fillText('MINUT', 400, 100);
 
     // Sekundy
-    ctx.fillText('SEKUND', 540, 100);
+    ctx.fillText('SEKUND', 550, 100);
 
     // Dodanie klatki do GIF-a
     encoder.addFrame(ctx);
